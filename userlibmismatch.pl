@@ -79,7 +79,7 @@ sub runProgram
 		outcode     => "UO,FE",
 		datacode    => "FE!" . $userlib,
 		timestamp   => Ostinato::TRUE,
-		command     => 'sed "s/$/\\|/" | seluser -iB ' . $usercatstring . $userlibstring . ' -oBDqr' . $address_string . 'S 2>testrun.error | sort ',
+		command     => 'sed "s/$/\\|/" | seluser -iB ' . $usercatstring . $userlibstring . ' -oBDqr' . $address_string . 'S 2>/dev/null | sort ',
 		destination => $vars->{'destination'},
 	});
 }
